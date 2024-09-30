@@ -42,9 +42,9 @@ async function cancelReservation(req, res) {
         }
 
         // 날짜와 시간 형식 변환
-        const formattedReserveDate = new Date(reserveDate).toISOString().split('T')[0];
-        const formattedStartTime = new Date(startTime).toISOString().slice(0, 19).replace('T', ' ');
-        const formattedEndTime = new Date(endTime).toISOString().slice(0, 19).replace('T', ' ');
+        const formattedReserveDate = reserveDate;
+        const formattedStartTime = startTime;
+        const formattedEndTime = endTime;
 
         const query = `
             DELETE FROM reservation
